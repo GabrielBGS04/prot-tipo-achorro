@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achorro - Cadastro</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="cadastro.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+    <a href="index.html">
+        <div class="logo-icon">
+            <img src="paw.png" alt="|">
+        </div>
+        <div class="logo-text">
+            <h1 class="logo-title">ACHORRO</h1>
+            <p class="logo-subtitle">ache seu pet!</p>
+        </div>
+    </a>
+</div>
+        <nav>
+            <a href="cadastro.html" class="active">Cadastro</a>
+            <a href="publicacoes.html">Publicações</a>
+            <button>Criar nova postagem</button>
+        </nav>
+    </header>
+    
+    <section class="cadastro-container">
+        <div class="cadastro-card">
+            <h2>Cadastre-se na Comunidade</h2>
+            <p class="subtitle">Junte-se a milhares de pessoas que ajudam a encontrar pets perdidos</p>
+            
+            <form class="cadastro-form">
+                <div class="form-group">
+                    <label for="nome">Nome completo</label>
+                    <input type="text" id="nome" placeholder="Digite seu nome completo" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" placeholder="Digite seu e-mail" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" placeholder="Crie uma senha segura" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="confirmar-senha">Confirmar senha</label>
+                    <input type="password" id="confirmar-senha" placeholder="Confirme sua senha" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="foto">Foto de perfil (opcional)</label>
+                    <input type="file" id="foto" class="file-input">
+                    <div class="file-button">Escolher arquivo</div>
+                    <span class="file-name">Nenhum arquivo selecionado</span>
+                </div>
+                
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="termos" required>
+                    <label for="termos">Concordo com os <a href="#">Termos de Uso</a> e <a href="#">Política de Privacidade</a></label>
+                </div>
+                
+                <button type="submit" class="cadastro-button">Criar minha conta</button>
+            </form>
+            
+            <div class="login-link">
+                Já tem uma conta? <a href="#">Faça login</a>
+            </div>
+        </div>
+        
+        <div class="cadastro-image">
+            <img src="cadastro-pet.jpg" alt="Cachorro feliz">
+            <div class="image-overlay">
+                <h3>Ajude a encontrar pets perdidos</h3>
+                <p>Sua participação pode fazer a diferença na vida de muitas famílias</p>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="footer-links">
+            <a href="termos.html">Termos de Uso</a>
+            <a href="sobre.html">Sobre nós</a>
+            <a href="contato.html">Contato</a>
+        </div>
+    </footer>
+
+    <script>
+        // Script para mostrar o nome do arquivo selecionado
+        document.querySelector('.file-input').addEventListener('change', function(e) {
+            const fileName = e.target.files[0] ? e.target.files[0].name : 'Nenhum arquivo selecionado';
+            document.querySelector('.file-name').textContent = fileName;
+        });
+        
+        document.querySelector('.file-button').addEventListener('click', function() {
+            document.querySelector('.file-input').click();
+        });
+    </script>
+</body>
+</html>
+

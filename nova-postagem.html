@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achorro - Criar Nova Postagem</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="nova-postagem.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <div class="logo-icon">
+                <img src="paw.png" alt="|">
+            </div>
+            <div class="logo-text">
+                <h1 class="logo-title">ACHORRO</h1>
+                <p class="logo-subtitle">ache seu pet!</p>
+            </div>
+        </div>
+        <nav>
+            <a href="cadastro.html">Cadastro</a>
+            <a href="publicacoes.html">Publicações</a>
+            <a href="nova-postagem.html"><button class="active">Criar nova postagem</button></a>
+        </nav>
+    </header>
+    
+    <div class="pagina-banner nova-postagem-banner">
+        <div class="banner-conteudo">
+            <h1>Criar Nova Postagem</h1>
+            <p>Preencha as informações abaixo para ajudarmos a encontrar seu pet</p>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="progresso-container">
+            <div class="progresso-barra">
+                <div class="progresso-etapa ativa" data-etapa="1">
+                    <div class="etapa-numero">1</div>
+                    <div class="etapa-texto">Informações do Pet</div>
+                </div>
+                <div class="progresso-etapa" data-etapa="2">
+                    <div class="etapa-numero">2</div>
+                    <div class="etapa-texto">Desaparecimento</div>
+                </div>
+                <div class="progresso-etapa" data-etapa="3">
+                    <div class="etapa-numero">3</div>
+                    <div class="etapa-texto">Fotos</div>
+                </div>
+                <div class="progresso-etapa" data-etapa="4">
+                    <div class="etapa-numero">4</div>
+                    <div class="etapa-texto">Contato</div>
+                </div>
+                <div class="progresso-etapa" data-etapa="5">
+                    <div class="etapa-numero">5</div>
+                    <div class="etapa-texto">Revisão</div>
+                </div>
+            </div>
+        </div>
+        
+        <form class="postagem-form">
+            <!-- Etapa 1: Informações do Pet -->
+            <div class="etapa-conteudo ativa" id="etapa-1">
+                <h2>Informações do Pet</h2>
+                
+                <div class="form-grupo">
+                    <label for="status">Status</label>
+                    <div class="radio-grupo">
+                        <div class="radio-opcao">
+                            <input type="radio" id="status-perdido" name="status" value="perdido" checked>
+                            <label for="status-perdido">Perdido</label>
+                        </div>
+                        <div class="radio-opcao">
+                            <input type="radio" id="status-encontrado" name="status" value="encontrado">
+                            <label for="status-encontrado">Encontrado</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-grupo">
+                    <label for="tipo-pet">Tipo de Pet</label>
+                    <select id="tipo-pet" name="tipo-pet" required>
+                        <option value="" disabled selected>Selecione o tipo de pet</option>
+                        <option value="cachorro">Cachorro</option>
+                        <option value="gato">Gato</option>
+                        <option value="ave">Ave</option>
+                        <option value="roedor">Roedor</option>
+                        <option value="outro">Outro</option>
+                    </select>
+                </div>
+                
+                <div class="form-grupo">
+                    <label for="nome-pet">Nome do Pet</label>
+                    <input type="text" id="nome-pet" name="nome-pet" placeholder="Digite o nome do pet" required>
+                </div>
+                
+                <div class="form-grupo">
+                    <label for="raca">Raça</label>
+                    <input type="text" id="raca" name="raca" placeholder="Digite a raça do pet">
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-grupo">
+                        <label for="idade">Idade</label>
+                        <input type="text" id="idade" name="idade" placeholder="Ex: 2 anos">
+                    </div>
+                    
+                    <div class="form-grupo">
+                        <label for="sexo">Sexo</label>
+                        <select id="sexo" name="sexo">
+                            <option value="" disabled selected>Selecione</option>
+                            <option value="macho">Macho</option>
+                            <option value="femea">Fêmea</option>
+                            <option value="desconhecido">Não sei</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-grupo">
+                    <label for="cor">Cor</label>
+                    <input type="text" id="cor" name="cor" placeholder="Ex: Preto e branco" required>
+                </div>
+                
+                <div class="form-grupo">
+                    <label for="porte">Porte</label>
+                    <select id="porte" name="porte" required>
+                        <option value="" disabled selected>Selecione o porte</option>
+                        <option value="pequeno">Pequeno</option>
+                        <option value="medio">Médio</option>
+                        <option value="grande">Grande</option>
+                    </select>
+                </div>
+                
+                <div class="form-grupo">
+                    <label for="caracteristicas">Características</label>
+                    <textarea id="caracteristicas" name="caracteristicas" placeholder="Descreva características marcantes do pet (coleira, manchas, comportamento, etc)" rows="4"></textarea>
+                </div>
+                
+                <div class="form-grupo">
+                    <label>Tags (selecione as que se aplicam)</label>
+                    <div class="tags-container">
+                        <div class="tag-item">
+                            <input type="checkbox" id="tag-docil" name="tags" value="docil">
+                            <label for="tag-docil">Dócil</label>
+                        </div>
+                        <div class="tag-item">
+                            <input type="checkbox" id="tag-timido" name="tags" value="timido">
+                            <label for="tag-timido">Tímido</label>
+                        </div>
+                        <div class="tag-item">
+                            <input type="checkbox" id="tag-brincalhao" name="tags" value="brincalhao">
+                            <label for="tag-brincalhao">Brincalhão</label>
+                        </div>
+                        <div class="tag-item">
+                            <input type="checkbox" id="tag-coleira" name="tags" value="coleira">
+                            <label for="tag-coleira">Usa coleira</label>
+                        </div>
+                        <div class="tag-item">
+                            <input type="checkbox" id="tag-microchip" name="tags" value="microchip">
+                            <label for="tag-microchip">Tem microchip</label>
+                        </div>
+                        <div class="tag-item">
+                            <input type="checkbox" id="tag-castrado" name="tags" value="castrado">
+                            <label for="tag-castrado">Castrado</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="botoes-navegacao">
+                    <button type="button" class="btn-proximo" data-proximo="2">Próximo</button>
+                </div>
+            </div>
+            
+            <!-- Etapa 2: Desaparecimento -->
+            <div class="etapa-conteudo" id="etapa-2">
+                <h2>Informações sobre o Desaparecimento</h2>
+                
+                <div class="form-row">
+                    <div class="form-grupo">
+                        <label for="data-desaparecimento">Data</label>
+                        <input type="date" id="data-desaparecimento" name="data-desaparecimento" required>
+                    </div>
+                    
+                    <div class="form-grupo">
+                        <label for="hora-desaparecimento">Horário (aproximado)</label>
+                        <input type="time" id="hora-desaparecimento" name="hora-desaparecimento">
+                    </div>
+                </div>
+                
+                <div class="form-grupo">
+                    <label for="local-desaparecimento">Local</label>
+                    <input type="text" id="local-desaparecimento" name="local-desaparecimento" placeholder="Ex: Próximo ao Parque Ibirapuera" required>
+                </div>
+                
+                <div class="form-grupo">
+                    <label for="bairro">Bairro</label>
+                    <input type="text" id="bairro" name="bairro" placeholder="Ex: Moema" required>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-grupo">
+                        <label for="cidade">Cidade</label>
+                        <input type="text" id="cidade" name="cidade" placeholder="Ex: São Paulo" required>
+                    </div>
+                    
+                    <div class="form-grupo">
+                        <label for="estado">Estado</label>
+                        <select id="estado" name="estado" required>
+                            <option value="" disabled selected>Selecione</option>
+                            <option value="AC">Acre</option>
+                            <option value="AL">Alagoas</option>
+                            <option value="AP">Amapá</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="BA">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="DF">Distrito Federal</option>
+                            <option value="ES">Espírito Santo</option>
+                            <option value="GO">Goiás</option>
+                            <option value="MA">Maranhão</option>
+                            <option value="MT">Mato Grosso</option>
+                            <option value="MS">Mato Grosso do Sul</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="PA">Pará</option>
+                            <option value="PB">Paraíba</option>
+                            <option value="PR">Paraná</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="PI">Piauí</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="RO">Rondônia</option>
+                            <option value="RR">Roraima</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="SE">Sergipe</option>
+                            <option value="TO">Tocantins</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-grupo">
+                    <label for="circunstancias">Circunstâncias</label>
+                    <textarea id="circunstancias" name="circunstancias" placeholder="Descreva como o pet desapareceu ou foi encontrado" rows="4" required></textarea>
+                </div>
+                
+                <div class="form-grupo">
+                    <label>Localização no Mapa</label>
+                    <div class="mapa-container">
+                        <div id="mapa" class="mapa-embed">
+                            <!-- Aqui seria inserido um mapa interativo -->
+                            <img src="mapa-exemplo.jpg" alt="Mapa para marcar localização" class="mapa-placeholder">
+                        </div>
+                        <p class="mapa-instrucao">Clique no mapa para marcar o local onde o pet foi visto pela última vez</p>
+                    </div>
+                </div>
+                
+                <div class="botoes-navegacao">
+                    <button type="button" class="btn-anterior" data-anterior="1">Anterior</button>
+                    <button type="button" class="btn-proximo" data-proximo="3">Próximo</button>
+                </div>
+            </div>
+            
+            <!-- Etapa 3: Fotos -->
+            <div class="etapa-conteudo" id="etapa-3">
+                <h2>Fotos do Pet</h2>
+                <p class="instrucao">Adicione fotos claras e recentes do seu pet. Isso aumenta as chances de reconhecimento.</p>
+                
+                <div class="form-grupo">
+                    <label for="foto-principal">Foto Principal (obrigatória)</label>
+                    <div class="upload-area" id="upload-principal">
+                        <input type="file" id="foto-principal" name="foto-principal" class="file-input" accept="image/*" required>
+                        <div class="upload-placeholder">
+                            <div class="upload-icon">📷</div>
+                            <div class="upload-texto">Clique para selecionar ou arraste uma imagem</div>
+                        </div>
+                        <div class="preview-container" id="preview-principal"></div>
+                    </div>
+                </div>
+                
+                <div class="form-grupo">
+                    <label>Fotos Adicionais (opcional)</label>
+                    <div class="fotos-adicionais">
+                        <div class="upload-area upload-adicional">
+                            <input type="file" name="fotos-adicionais[]" class="file-input" accept="image/*">
+                            <div class="upload-placeholder">
+                                <div class="upload-icon">+</div>
+                            </div>
+                            <div class="preview-container"></div>
+                        </div>
+                        
+                        <div class="upload-area upload-adicional">
+                            <input type="file" name="fotos-adicionais[]" class="file-input" accept="image/*">
+                            <div class="upload-placeholder">
+                                <div class="upload-icon">+</div>
+                            </div>
+                            <div class="preview-container"></div>
+                        </div>
+                        
+                        <div class="upload-area upload-adicional">
+                            <input type="file" name="fotos-adicionais[]" class="file-input" accept="image/*">
+                            <div class="upload-placeholder">
+                                <div class="upload-icon">+</div>
+                            </div>
+                            <div class="preview-container"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="botoes-navegacao">
+                    <button type="button" class="btn-anterior" data-anterior="2">Anterior</button>
+                    <button type="button" class="btn-proximo" data-proximo="4">Próximo</button>
+                </div>
+            </div>
+            
+            <!-- Etapa 4: Contato -->
+            <div class="etapa-conteudo" id="etapa-4">
+                <h2>Informações de Contato</h2>
+                
+                <div class="form-grupo">
+                    <label for="nome-responsavel">Nome do Responsável</label>
+                    <input type="text" id="nome-responsavel" name="nome-responsavel" placeholder="Digite seu nome completo" required>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-grupo">
+                        <label for="telefone">Telefone</label>
+                        <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000" required>
+                    </div>
+                    
+                    <div class="form-grupo">
+                        <label for="whatsapp">WhatsApp</label>
+                        <input type="tel" id="whatsapp" name="whatsapp" placeholder="(00) 00000-0000">
+                    </div>
+                </div>
+                
+                <div class="form-grupo">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+                </div>
+                
+                <div class="form-grupo">
+                    <label for="recompensa">Recompensa (opcional)</label>
+                    <input type="text" id="recompensa" name="recompensa" placeholder="Ex: R$ 500,00">
+                </div>
+                
+                <div class="form-grupo checkbox-grupo">
+                    <input type="checkbox" id="mostrar-contato" name="mostrar-contato" checked>
+                    <label for="mostrar-contato">Mostrar minhas informações de contato na publicação</label>
+                </div>
+                
+                <div class="form-grupo checkbox-grupo">
+                    <input type="checkbox" id="notificacoes" name="notificacoes" checked>
+                    <label for="notificacoes">Receber notificações sobre esta publicação</label>
+                </div>
+                
+                <div class="form-grupo checkbox-grupo">
+                    <input type="checkbox" id="termos-publicacao" name="termos-publicacao" required>
+                    <label for="termos-publicacao">Concordo com os <a href="termos.html">Termos de Uso</a> e confirmo que as informações fornecidas são verdadeiras</label>
+                </div>
+                
+                <div class="botoes-navegacao">
+                    <button type="button" class="btn-anterior" data-anterior="3">Anterior</button>
+                    <button type="button" class="btn-proximo" data-proximo="5">Próximo</button>
+                </div>
+            </div>
+            
+            <!-- Etapa 5: Revisão -->
+            <div class="etapa-conteudo" id="etapa-5">
+                <h2>Revisão da Publicação</h2>
+                <p class="instrucao">Verifique se todas as informações estão corretas antes de publicar.</p>
+                
+                <div class="revisao-container">
+                    <div class="revisao-secao">
+                        <h3>Informações do Pet</h3>
+                        <div class="revisao-grid">
+                            <div class="revisao-item">
+                                <span class="revisao-label">Status:</span>
+                                <span class="revisao-valor" id="revisao-status">Perdido</span>
+                            </div>
+                            <div class="revisao-item">
+                                <span class="revisao-label">Nome:</span>
+                                <span class="revisao-valor" id="revisao-nome">-</span>
+                            </div>
+                            <div class="revisao-item">
+                                <span class="revisao-label">Tipo:</span>
+                                <span class="revisao-valor" id="revisao-tipo">-</span>
+                            </div>
+                            <div class="revisao-item">
+                                <span class="revisao-label">Raça:</span>
+                                <span class="revisao-valor" id="revisao-raca">-</span>
+                            </div>
+                            <div class="revisao-item">
+                                <span class="revisao-label">Idade:</span>
+                                <span class="revisao-valor" id="revisao-idade">-</span>
+                            </div>
+                            <div class="revisao-item">
+                                <span class="revisao-label">Sexo:</span>
+                                <span class="revisao-valor" id="revisao-sexo">-</span>
+                            </div>
+                            <div class="revisao-item">
+                                <span class="revisao-label">Cor:</span>
+                                <span class="revisao-valor" id="revisao-cor">-</span>
+                            </div>
+                            <div class="revisao-item">
+                                <span class="revisao-label">Porte:</span>
+                                <span class="revisao-valor" id="revisao-porte">-</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="revisao-secao">
+                        <h3>Desaparecimento</h3>
+                        <div class="revisao-grid">
+                            <div class="revisao-item">
+                                <span class="revisao-label">Data:</span>
+                                <span class="revisao-valor" id="revisao-data">-</span>
+                            </div>
+                            <div class="revisao-item">
+                                <span class="revisao-label">Local:</span>
+                                <span class="revisao-valor" id="revisao-local">-</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="revisao-secao">
+                        <h3>Contato</h3>
+                        <div class="revisao-grid">
+                            <div class="revisao-item">
+                                <span class="revisao-label">Responsável:</span>
+                                <span class="revisao-valor" id="revisao-responsavel">-</span>
+                            </div>
+                            <div class="revisao-item">
+                                <span class="revisao-label">Telefone:</span>
+                                <span class="revisao-valor" id="revisao-telefone">-</span>
+                            </div>
+                            <div class="revisao-item">
+                                <span class="revisao-label">E-mail:</span>
+                                <span class="revisao-valor" id="revisao-email">-</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="revisao-secao">
+                        <h3>Foto Principal</h3>
+                        <div class="revisao-foto" id="revisao-foto-principal">
+                            <div class="foto-placeholder">Nenhuma foto selecionada</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="botoes-navegacao">
+                    <button type="button" class="btn-anterior" data-anterior="4">Anterior</button>
+                    <button type="submit" class="btn-publicar">Publicar</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    
+    <footer>
+        <div class="footer-links">
+            <a href="termos.html">Termos de Uso</a>
+            <a href="sobre.html">Sobre nós</a>
+            <a href="contato.html">Contato</a>
+        </div>
+    </footer>
+    
+    <script>
+        // Script para navegação entre etapas
+        document.addEventListener('DOMContentLoaded', function() {
+            // Botões de navegação
+            const btnProximo = document.querySelectorAll('.btn-proximo');
+            const btnAnterior = document.querySelectorAll('.btn-anterior');
+            
+            // Navegação para próxima etapa
+            btnProximo.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const etapaAtual = parseInt(this.getAttribute('data-proximo')) - 1;
+                    const proximaEtapa = parseInt(this.getAttribute('data-proximo'));
+                    
+                    // Validar campos da etapa atual antes de avançar
+                    if (validarEtapa(etapaAtual)) {
+                        mudarEtapa(proximaEtapa);
+                        
+                        // Se for a última etapa, preencher os dados de revisão
+                        if (proximaEtapa === 5) {
+                            preencherRevisao();
+                        }
+                    }
+                });
+            });
+            
+            // Navegação para etapa anterior
+            btnAnterior.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const etapaAnterior = parseInt(this.getAttribute('data-anterior'));
+                    mudarEtapa(etapaAnterior);
+                });
+            });
+            
+            // Função para mudar de etapa
+            function mudarEtapa(etapa) {
+                // Atualizar conteúdo da etapa
+                document.querySelectorAll('.etapa-conteudo').forEach(conteudo => {
+                    conteudo.classList.remove('ativa');
+                });
+                document.getElementById(`etapa-${etapa}`).classList.add('ativa');
+                
+                // Atualizar barra de progresso
+                document.querySelectorAll('.progresso-etapa').forEach(item => {
+                    const etapaItem = parseInt(item.getAttribute('data-etapa'));
+                    if (etapaItem < etapa) {
+                        item.classList.add('concluida');
+                        item.classList.remove('ativa');
+                    } else if (etapaItem === etapa) {
+                        item.classList.add('ativa');
+                        item.classList.remove('concluida');
+                    } else {
+                        item.classList.remove('ativa', 'concluida');
+                    }
+                });
+                
+                // Rolar para o topo do formulário
+                window.scrollTo({
+                    top: document.querySelector('.container').offsetTop - 20,
+                    behavior: 'smooth'
+                });
+            }
+            
+            // Função para validar campos da etapa
+            function validarEtapa(etapa) {
+                // Aqui seria implementada a validação dos campos obrigatórios
+                // Para simplificar, estamos retornando true
+                return true;
+            }
+            
+            // Função para preencher os dados de revisão
+            function preencherRevisao() {
+                // Status
+                const status = document.querySelector('input[name="status"]:checked').value;
+                document.getElementById('revisao-status').textContent = status === 'perdido' ? 'Perdido' : 'Encontrado';
+                
+                // Nome do pet
+                document.getElementById('revisao-nome').textContent = document.getElementById('nome-pet').value || '-';
+                
+                // Tipo de pet
+                const tipoPet = document.getElementById('tipo-pet');
+                document.getElementById('revisao-tipo').textContent = tipoPet.options[tipoPet.selectedIndex].text || '-';
+                
+                // Raça
+                document.getElementById('revisao-raca').textContent = document.getElementById('raca').value || '-';
+                
+                // Idade
+                document.getElementById('revisao-idade').textContent = document.getElementById('idade').value || '-';
+                
+                // Sexo
+                const sexo = document.getElementById('sexo');
+                document.getElementById('revisao-sexo').textContent = sexo.options[sexo.selectedIndex].text || '-';
+                
+                // Cor
+                document.getElementById('revisao-cor').textContent = document.getElementById('cor').value || '-';
+                
+                // Porte
+                const porte = document.getElementById('porte');
+                document.getElementById('revisao-porte').textContent = porte.options[porte.selectedIndex].text || '-';
+                
+                // Data de desaparecimento
+                const data = document.getElementById('data-desaparecimento').value;
+                if (data) {
+                    const dataFormatada = new Date(data).toLocaleDateString('pt-BR');
+                    document.getElementById('revisao-data').textContent = dataFormatada;
+                }
+                
+                // Local
+                const local = document.getElementById('local-desaparecimento').value;
+                const bairro = document.getElementById('bairro').value;
+                const cidade = document.getElementById('cidade').value;
+                const estado = document.getElementById('estado').value;
+                let localCompleto = '';
+                
+                if (local) localCompleto += local;
+                if (bairro) localCompleto += (localCompleto ? ', ' : '') + bairro;
+                if (cidade) localCompleto += (localCompleto ? ', ' : '') + cidade;
+                if (estado) localCompleto += (localCompleto ? ' - ' : '') + estado;
+                
+                document.getElementById('revisao-local').textContent = localCompleto || '-';
+                
+                // Responsável
+                document.getElementById('revisao-responsavel').textContent = document.getElementById('nome-responsavel').value || '-';
+                
+                // Telefone
+                document.getElementById('revisao-telefone').textContent = document.getElementById('telefone').value || '-';
+                
+                // Email
+                document.getElementById('revisao-email').textContent = document.getElementById('email').value || '-';
+                
+                // Foto principal
+                const fotoPrincipal = document.getElementById('foto-principal').files[0];
+                if (fotoPrincipal) {
+                    const previewContainer = document.getElementById('revisao-foto-principal');
+                    previewContainer.innerHTML = '';
+                    
+                    const img = document.createElement('img');
+                    img.src = URL.createObjectURL(fotoPrincipal);
+                    img.alt = 'Foto do pet';
+                    img.className = 'revisao-imagem';
+                    
+                    previewContainer.appendChild(img);
+                }
+            }
+            
+            // Script para preview de imagens
+            const inputsFoto = document.querySelectorAll('.file-input');
+            
+            inputsFoto.forEach(input => {
+                input.addEventListener('change', function(e) {
+                    const file = this.files[0];
+                    if (file) {
+                        const previewContainer = this.parentElement.querySelector('.preview-container');
+                        const placeholder = this.parentElement.querySelector('.upload-placeholder');
+                        
+                        // Limpar preview anterior
+                        previewContainer.innerHTML = '';
+                        
+                        // Criar preview
+                        const img = document.createElement('img');
+                        img.src = URL.createObjectURL(file);
+                        img.alt = 'Preview';
+                        img.className = 'preview-image';
+                        
+                        // Adicionar botão de remover
+                        const removeBtn = document.createElement('button');
+                        removeBtn.type = 'button';
+                        removeBtn.className = 'btn-remover-foto';
+                        removeBtn.innerHTML = '&times;';
+                        removeBtn.addEventListener('click', function() {
+                            // Limpar o input de arquivo
+                            input.value = '';
+                            
+                            // Remover preview
+                            previewContainer.innerHTML = '';
+                            
+                            // Mostrar placeholder novamente
+                            placeholder.style.display = 'flex';
+                        });
+                        
+                        previewContainer.appendChild(img);
+                        previewContainer.appendChild(removeBtn);
+                        
+                        // Esconder placeholder
+                        placeholder.style.display = 'none';
+                    }
+                });
+            });
+            
+            // Submissão do formulário
+            document.querySelector('.postagem-form').addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Aqui seria implementado o envio dos dados para o servidor
+                // Para demonstração, apenas exibimos uma mensagem de sucesso
+                alert('Publicação criada com sucesso! Você será redirecionado para a página de publicações.');
+                
+                // Redirecionar para a página de publicações
+                window.location.href = 'publicacoes.html';
+            });
+        });
+    </script>
+</body>
+</html>
+

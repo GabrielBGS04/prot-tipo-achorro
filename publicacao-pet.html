@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achorro - Detalhes do Pet</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="publicacoes.css">
+    <link rel="stylesheet" href="publicacao-pet.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+    <a href="index.html">
+        <div class="logo-icon">
+            <img src="paw.png" alt="|">
+        </div>
+        <div class="logo-text">
+            <h1 class="logo-title">ACHORRO</h1>
+            <p class="logo-subtitle">ache seu pet!</p>
+        </div>
+    </a>
+</div>
+        <nav>
+            <a href="cadastro.html">Cadastro</a>
+            <a href="publicacoes.html" class="active">Publicações</a>
+            <button>Criar nova postagem</button>
+        </nav>
+    </header>
+    
+    <div class="breadcrumb">
+        <a href="index.html">Início</a> &gt; 
+        <a href="publicacoes.html">Publicações</a> &gt; 
+        <span id="pet-nome">Oreo</span>
+    </div>
+    
+    <section class="pet-detalhe">
+        <div class="pet-header">
+            <h1 id="pet-titulo">Oreo</h1>
+            <span class="status perdido" id="pet-status">Perdido</span>
+        </div>
+        
+        <div class="pet-conteudo">
+            <div class="pet-galeria">
+                <div class="imagem-principal">
+                    <img src="pet1.jpg" alt="Oreo" id="pet-imagem">
+                </div>
+            </div>
+            
+            <div class="pet-info">
+                <div class="info-bloco">
+                    <h2>Informações</h2>
+                    <ul>
+                        <li><strong>Nome:</strong> <span id="info-nome">Oreo</span></li>
+                        <li><strong>Raça:</strong> <span id="info-raca">Pinscher</span></li>
+                        <li><strong>Idade:</strong> <span id="info-idade">7 anos</span></li>
+                        <li><strong>Sexo:</strong> <span id="info-sexo">Macho</span></li>
+                        <li><strong>Cor:</strong> <span id="info-cor">Marrom</span></li>
+                        <li><strong>Porte:</strong> <span id="info-porte">Pequeno</span></li>
+                        <li><strong>Características:</strong> <span id="info-caracteristicas">Dócil, brincalhão, usa coleira azul</span></li>
+                    </ul>
+                </div>
+                
+                <div class="info-bloco">
+                    <h2>Desaparecimento</h2>
+                    <ul>
+                        <li><strong>Data:</strong> <span id="info-data">15/03/2023</span></li>
+                        <li><strong>Horário:</strong> <span id="info-horario">Por volta das 18h</span></li>
+                        <li><strong>Local:</strong> <span id="info-local">Zona Sul - Próximo ao Parque Ibirapuera</span></li>
+                        <li><strong>Circunstâncias:</strong> <span id="info-circunstancias">Fugiu durante um passeio quando se assustou com fogos de artifício</span></li>
+                    </ul>
+                </div>
+                
+                <div class="info-bloco">
+                    <h2>Contato</h2>
+                    <ul>
+                        <li><strong>Responsável:</strong> <span id="info-responsavel">Carlos Silva</span></li>
+                        <li><strong>Telefone:</strong> <span id="info-telefone">(11) 98765-4321</span></li>
+                        <li><strong>Email:</strong> <span id="info-email">carlos.silva@email.com</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="comentarios">
+            <h2>Comentários (8)</h2>
+            
+            <div class="comentario">
+                <div class="comentario-avatar">
+                    <img src="perfil2.jpg" alt="Avatar de Maria">
+                </div>
+                <div class="comentario-conteudo">
+                    <div class="comentario-info">
+                        <span class="comentario-autor">Maria Souza</span>
+                        <span class="comentario-data">18/03/2023 - 10:45</span>
+                    </div>
+                    <p>Acho que vi esse cachorro ontem à noite perto do portão 9 do parque. Vou passar por lá hoje novamente e ficarei atenta.</p>
+                </div>
+            </div>
+            
+            <div class="comentario">
+                <div class="comentario-avatar">
+                    <img src="perfil1.jpg" alt="Avatar de João">
+                </div>
+                <div class="comentario-conteudo">
+                    <div class="comentario-info">
+                        <span class="comentario-autor">João Paulo</span>
+                        <span class="comentario-data">17/03/2023 - 18:20</span>
+                    </div>
+                    <p>Compartilhei nas redes sociais. Espero que encontrem logo!</p>
+                </div>
+            </div>
+            
+            <form class="comentario-form">
+                <h3>Deixe um comentário</h3>
+                <textarea placeholder="Escreva seu comentário ou informação sobre o pet..."></textarea>
+                <button type="submit">Enviar comentário</button>
+            </form>
+        </div>
+    </section>
+    
+    <section class="pets-similares">
+        <h2>Outros pets perdidos na mesma região</h2>
+        <div class="pets-similares-grid">
+            <a href="publicacao-pet.html?pet=mel" class="publicacao-card">
+                <div class="publicacao-imagem">
+                    <img src="pet4.jpg" alt="Mel">
+                    <span class="status perdido">Perdido</span>
+                </div>
+                <div class="publicacao-info">
+                    <h3>Mel</h3>
+                    <p class="local"><strong>Local:</strong> Zona Sul - Moema</p>
+                </div>
+            </a>
+            
+            <a href="publicacao-pet.html?pet=nino" class="publicacao-card">
+                <div class="publicacao-imagem">
+                    <img src="pet5.jpg" alt="Nino">
+                    <span class="status perdido">Perdido</span>
+                </div>
+                <div class="publicacao-info">
+                    <h3>Nino</h3>
+                    <p class="local"><strong>Local:</strong> Zona Sul - Campo Belo</p>
+                </div>
+            </a>
+            
+            <a href="#" class="publicacao-card">
+                <div class="publicacao-imagem">
+                    <img src="pet6.jpg" alt="Luna">
+                    <span class="status perdido">Perdido</span>
+                </div>
+                <div class="publicacao-info">
+                    <h3>Luna</h3>
+                    <p class="local"><strong>Local:</strong> Zona Sul - Brooklin</p>
+                </div>
+            </a>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="footer-links">
+            <a href="termos.html">Termos de Uso</a>
+            <a href="sobre.html">Sobre nós</a>
+            <a href="contato.html">Contato</a>
+        </div>
+    </footer>
+    
+    <script>
+        // Script para trocar as imagens na galeria
+        document.querySelectorAll('.miniaturas img').forEach(img => {
+            img.addEventListener('click', function() {
+                // Remove a classe ativa de todas as miniaturas
+                document.querySelectorAll('.miniaturas img').forEach(i => i.classList.remove('ativa'));
+                
+                // Adiciona a classe ativa na miniatura clicada
+                this.classList.add('ativa');
+                
+                // Atualiza a imagem principal
+                document.getElementById('pet-imagem').src = this.src;
+            });
+        });
+        
+        // Script para carregar os dados do pet com base no parâmetro da URL
+        // Em uma aplicação real, esses dados viriam de um banco de dados
+        window.addEventListener('DOMContentLoaded', function() {
+            // Obter o parâmetro pet da URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const petNome = urlParams.get('pet');
+            
+                
+                // Exemplo simples para demonstração
+                if (petNome === 'lorena') {
+                    document.getElementById('pet-nome').textContent = 'Lorena';
+                    document.getElementById('pet-titulo').textContent = 'Lorena';
+                    document.getElementById('pet-imagem').src = 'pet2.jpg';
+                    document.getElementById('info-nome').textContent = 'Lorena';
+                    document.getElementById('info-raca').textContent = 'Golden Retriever';
+                    document.getElementById('info-idade').textContent = '2 anos';
+                    document.getElementById('info-sexo').textContent = 'Fêmea';
+                    document.getElementById('info-cor').textContent = 'Dourado';
+                    document.getElementById('info-porte').textContent = 'Grande';
+                    document.getElementById('info-caracteristicas').textContent = 'Tímida, usa coleira vermelha';
+                    document.getElementById('info-data').textContent = '22/03/2023';
+                    document.getElementById('info-local').textContent = 'Zona Oeste - Próximo ao Shopping Eldorado';
+                    // Atualizar outros campos...
+                }
+                else if (petNome === 'max') {
+                    document.getElementById('pet-nome').textContent = 'Max';
+                    document.getElementById('pet-titulo').textContent = 'Max';
+                    document.getElementById('pet-imagem').src = 'pet3.jpg';
+                    document.getElementById('pet-status').textContent = 'Encontrado';
+                    document.getElementById('info-nome').textContent = 'Max';
+                    document.getElementById('info-raca').textContent = 'Pug';
+                    document.getElementById('info-idade').textContent = '5 anos';
+                    document.getElementById('info-sexo').textContent = 'Macho';
+                    document.getElementById('info-cor').textContent = 'Bege';
+                    document.getElementById('info-porte').textContent = 'Pequeno';
+                    document.getElementById('info-caracteristicas').textContent = 'Brincalhão, usa coleira azul';
+                    document.getElementById('info-data').textContent = '10/08/2023';
+                    document.getElementById('info-local').textContent = 'Zona Norte - Próximo ao Parque da Juventude';
+                }
+                else if (petNome === 'mel') {
+                    document.getElementById('pet-nome').textContent = 'Mel';
+                    document.getElementById('pet-titulo').textContent = 'Mel';
+                    document.getElementById('pet-imagem').src = 'pet4.jpg';
+                    document.getElementById('info-nome').textContent = 'Mel';
+                    document.getElementById('info-raca').textContent = 'Dálmata';
+                    document.getElementById('info-idade').textContent = '3 anos';
+                    document.getElementById('info-sexo').textContent = 'Fêmea';
+                    document.getElementById('info-cor').textContent = 'Branca e preta';
+                    document.getElementById('info-porte').textContent = 'Grande';
+                    document.getElementById('info-caracteristicas').textContent = 'Medrosa, sem coleira';
+                    document.getElementById('info-data').textContent = '05/05/2023';
+                    document.getElementById('info-local').textContent = 'Centro - Próximo à Praça da República';
+                    // Atualizar outros campos...
+                }
+                else if (petNome === 'nino') {
+                    document.getElementById('pet-nome').textContent = 'Nino';
+                    document.getElementById('pet-titulo').textContent = 'Nino';
+                    document.getElementById('pet-imagem').src = 'pet5.jpg';
+                    document.getElementById('info-nome').textContent = 'Nino';
+                    document.getElementById('info-raca').textContent = 'Pastor Alemão';
+                    document.getElementById('info-idade').textContent = '1 ano';
+                    document.getElementById('info-sexo').textContent = 'Macho';
+                    document.getElementById('info-cor').textContent = 'Bege e marrom';
+                    document.getElementById('info-porte').textContent = 'Grande';
+                    document.getElementById('info-caracteristicas').textContent = 'Só late, mas não morde, coleira verde';
+                    document.getElementById('info-data').textContent = '18/09/2023';
+                    document.getElementById('info-local').textContent = 'Zona Leste - Próximo ao Shopping Anália Franco';
+                    // Atualizar outros campos...
+                }
+                else if (petNome === 'luna') {
+                    document.getElementById('pet-nome').textContent = 'Luna';
+                    document.getElementById('pet-titulo').textContent = 'Luna';
+                    document.getElementById('pet-imagem').src = 'pet6.jpg';
+                    document.getElementById('info-nome').textContent = 'Luna';
+                    document.getElementById('info-raca').textContent = 'Golden Retriever';
+                    document.getElementById('info-idade').textContent = '7 meses';
+                    document.getElementById('info-sexo').textContent = 'Fêmea';
+                    document.getElementById('info-cor').textContent = 'Dourado';
+                    document.getElementById('info-porte').textContent = 'Grande';
+                    document.getElementById('info-caracteristicas').textContent = 'Nenem, gosta de brincar, coleira rosa';
+                    document.getElementById('info-data').textContent = '18/12/2023';
+                    document.getElementById('info-local').textContent = 'Zona Sul - Próximo ao Estádio Morumbi';
+                    // Atualizar outros campos...
+                }
+                else if (petNome === 'thor') {
+                    document.getElementById('pet-nome').textContent = 'Thor';
+                    document.getElementById('pet-titulo').textContent = 'Thor';
+                    document.getElementById('pet-imagem').src = 'pet7.jpg';
+                    document.getElementById('info-nome').textContent = 'Thor';
+                    document.getElementById('info-raca').textContent = 'Corgi';
+                    document.getElementById('info-idade').textContent = '4 anos';
+                    document.getElementById('info-sexo').textContent = 'Macho';
+                    document.getElementById('info-cor').textContent = 'Branco e marrom';
+                    document.getElementById('info-porte').textContent = 'Pequeno';
+                    document.getElementById('info-caracteristicas').textContent = 'Usa coleira preta';
+                    document.getElementById('info-data').textContent = '27/06/2023';
+                    document.getElementById('info-local').textContent = 'Zona Norte - Próximo a estação da Sé';
+                    // Atualizar outros campos...
+                }
+                // Adicionar outros pets conforme necessário
+        });
+    </script>
+</body>
+</html>
+
