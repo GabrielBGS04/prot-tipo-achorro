@@ -4,15 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Achorro - Cadastro</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="cadastro.css">
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="../styles/cadastro.css">
+    <script src="../scripts/uploadFoto.js"></script>
 </head>
 <body>
     <header>
         <div class="logo">
-    <a href="index.html">
+    <a href="../pages/index.html">
         <div class="logo-icon">
-            <img src="paw.png" alt="|">
+            <img src="../assets/icons/paw.png" alt="|">
         </div>
         <div class="logo-text">
             <h1 class="logo-title">ACHORRO</h1>
@@ -21,9 +22,9 @@
     </a>
 </div>
         <nav>
-            <a href="cadastro.html" class="active">Cadastro</a>
-            <a href="publicacoes.html">Publicações</a>
-            <button>Criar nova postagem</button>
+            <a href="../pages/cadastro.html" class="active">Cadastro</a>
+            <a href="../pages/publicacoes.html">Publicações</a>
+            <a href="../pages/nova-postagem.html"><button>Criar nova postagem</button></a>
         </nav>
     </header>
     
@@ -74,7 +75,7 @@
         </div>
         
         <div class="cadastro-image">
-            <img src="cadastro-pet.jpg" alt="Cachorro feliz">
+            <img src="../assets/images/cadastro-pet.jpg" alt="Cachorro feliz">
             <div class="image-overlay">
                 <h3>Ajude a encontrar pets perdidos</h3>
                 <p>Sua participação pode fazer a diferença na vida de muitas famílias</p>
@@ -84,23 +85,11 @@
     
     <footer>
         <div class="footer-links">
-            <a href="termos.html">Termos de Uso</a>
-            <a href="sobre.html">Sobre nós</a>
-            <a href="contato.html">Contato</a>
+            <a href="../pages/termos.html">Termos de Uso</a>
+            <a href="../pages/sobre.html">Sobre nós</a>
+            <a href="../pages/contato.html">Contato</a>
         </div>
     </footer>
-
-    <script>
-        // Script para mostrar o nome do arquivo selecionado
-        document.querySelector('.file-input').addEventListener('change', function(e) {
-            const fileName = e.target.files[0] ? e.target.files[0].name : 'Nenhum arquivo selecionado';
-            document.querySelector('.file-name').textContent = fileName;
-        });
-        
-        document.querySelector('.file-button').addEventListener('click', function() {
-            document.querySelector('.file-input').click();
-        });
-    </script>
 </body>
 </html>
 

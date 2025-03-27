@@ -69,7 +69,7 @@ const swiper = new Swiper(".mySwiper", {
     handleScroll()
   
     // Adicionar evento de scroll para animar quando ficar visível
-    window.addEventListener("scroll", handleScroll)
+    // window.addEventListener("scroll", handleScroll)
   })
   
   // Iniciar animação imediatamente quando a página carrega completamente

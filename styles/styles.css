@@ -6,6 +6,10 @@ body {
   text-align: center;
 }
 
+a {
+  text-decoration: none;
+}
+
 /* Cabeçalho Responsivo */
 header {
   background: #159281;
@@ -32,8 +36,8 @@ header {
 }
 
 .logo img {
-  padding-top: 1.4rem;
-  margin-right: -1.8rem;
+  padding-top: 2.2rem;
+  margin-right: -3rem;
   max-width: 115px; /* Reduzido de 3.4rem para 2rem */
   height: auto;
 }
@@ -57,14 +61,14 @@ header {
 /* Adicionando estilos para o link do logo */
 .logo a {
   color: black;
-  text-decoration: none;
   cursor: pointer;
   display: flex;
   align-items: center;
 }
 
 .logo a:hover {
-  text-decoration: underline;
+  transition: all 0.15s ease;
+  transform: scale(1.02);
 }
 
 /* navigation */
@@ -76,11 +80,11 @@ nav {
 
 nav a {
   color: black;
-  text-decoration: none;
 }
 
 nav a:hover {
-  text-decoration: underline;
+  transition: all 0.15s ease;
+  transform: scale(1.02);
 }
 
 nav button {
@@ -112,7 +116,7 @@ nav button.active {
 
 /* Estilo para link ativo no menu */
 nav a.active {
-  font-weight: bold;
+  font-weight: bolder;
   text-decoration: underline;
 }
 
@@ -160,7 +164,6 @@ h2 {
 /* Links dentro dos slides */
 .swiper-slide a {
   color: white;
-  text-decoration: none;
   display: block;
   width: 100%;
 }
@@ -257,7 +260,7 @@ h2 {
   color: white;
   padding: 15px;
   margin: 20px auto;
-  width: 90%;
+  width: 60%;
   border-radius: 10px;
   text-align: center;
 }
@@ -284,7 +287,6 @@ h2 {
   border: none;
   border-radius: 5px;
   font-size: 16px;
-  width: 100%;
 }
 
 .join button {
@@ -307,10 +309,10 @@ h2 {
 /* Seção de Comentários */
 .comments {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
+  justify-content: space-around;
   padding: 20px;
-  width: 100%;
 }
 
 /* Container de comentários */
@@ -318,16 +320,16 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
   width: 100%;
   max-width: 900px;
 }
 
 /* Estilo individual do comentário */
 .comment {
-  width: calc(33.333% - 20px); /* 3 colunas no desktop */
+  width: calc(33.333% - 200px); /* 3 colunas no desktop */
+  height: 5rem;
   min-width: 250px; /* Evita que fiquem muito pequenos */
-  background-color: #f9f9f9;
+  background-color: #d9d9d9;
   border-radius: 8px;
   padding: 18px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -368,7 +370,6 @@ footer {
 .footer-links a {
   color: white;
   margin: 0 10px;
-  text-decoration: none;
 }
 
 /* Estilos para as páginas institucionais */
@@ -564,7 +565,6 @@ footer {
 
 .checkbox-group a {
   color: #00796b;
-  text-decoration: none;
 }
 
 .cadastro-button {
@@ -590,7 +590,6 @@ footer {
 
 .login-link a {
   color: #00796b;
-  text-decoration: none;
   font-weight: bold;
 }
 
